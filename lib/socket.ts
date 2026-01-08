@@ -8,7 +8,7 @@ export function getSocket() {
       process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3001";
 
     socket = io(url, {
-      transports: ["websocket"],
+      transports: ["polling", "websocket"],
       autoConnect: true
     });
   }
